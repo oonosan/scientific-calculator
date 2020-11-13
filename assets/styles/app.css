@@ -22,7 +22,7 @@ body {
 }
 
 /* Display */
-.calculation {
+.current-calculation {
   display: flex;
   flex-direction: row-reverse;
   height: 3em;
@@ -35,6 +35,7 @@ body {
   display: flex;
   flex-direction: row-reverse;
   color: white;
+  height: 2em;
   padding: 1em;
 }
 
@@ -52,6 +53,7 @@ button {
   background-color: #0C141D;
   color: white;
   border: 0px;
+  outline: none;
 }
 
 button span {
@@ -66,6 +68,10 @@ button:hover {
 button:hover span {
   font-size: 2.6em;
   transition-duration: 400ms;
+}
+
+button:active span {
+  font-size: 1.5em;
 }
 
 #btn-clear {
