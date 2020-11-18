@@ -1,4 +1,11 @@
+let numbersEntered = 0;
+const MAX_DIGITS = 15;
+
 function selectOne() {
+  maxDigitsWarning();
+  if (numbersEntered > MAX_DIGITS) {
+
+  }
   writeSelectedButton('1');
 }
 

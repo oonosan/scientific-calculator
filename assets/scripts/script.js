@@ -23,10 +23,20 @@ const result = document.getElementById('btn-result');
 const currentResultOutput = document.getElementById('temp-result');
 const currentCalculationOutput = document.getElementById('current-calculation');
 
+const toaster = document.getElementById("toaster");
+
 function writeSelectedButton(number) {
   currentCalculationOutput.textContent = currentCalculationOutput.textContent + number;
 }
 
 function clearOutput() {
   currentCalculationOutput.textContent = '';
+}
+
+function maxDigitsWarning() {
+  // Add the "show" class to DIV
+  toaster.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ toaster.className = toaster.className.replace("show", ""); }, 3000);
 }
