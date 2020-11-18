@@ -1,45 +1,73 @@
 function selectOne() {
-  writeNumber('1');
+  writeSelectedButton('1');
 }
 
 function selectZero() {
-  writeNumber('0');
+  writeSelectedButton('0');
 }
 
 function selectTwo() {
-  writeNumber('2');
+  writeSelectedButton('2');
 }
 
 function selectThree() {
-  writeNumber('3');
+  writeSelectedButton('3');
 }
 
 function selectFour() {
-  writeNumber('4');
+  writeSelectedButton('4');
 }
 
 function selectFive() {
-  writeNumber('5');
+  writeSelectedButton('5');
 }
 
 function selectSix() {
-  writeNumber('6');
+  writeSelectedButton('6');
 }
 
 function selectSeven() {
-  writeNumber('7');
+  writeSelectedButton('7');
 }
 
 function selectEight() {
-  writeNumber('8');
+  writeSelectedButton('8');
 }
 
 function selectNine() {
-  writeNumber('9');
+  writeSelectedButton('9');
 }
 
 function selectDot() {
-  writeNumber('.');
+  writeSelectedButton('.');
+}
+
+function selectPorcentage() {
+  writeSelectedButton('%');
+}
+
+function selectDivide() {
+  writeSelectedButton('/');
+}
+
+function selectMultiply() {
+  writeSelectedButton('x');
+}
+
+function selectMinus() {
+  writeSelectedButton('-');
+}
+
+function selectPlus() {
+  writeSelectedButton('+');
+}
+
+function selectClear() {
+  clearOutput();
+}
+
+function selectParenthesis() {
+  //Parenthesis
 }
 
 // addEventListener parameter1 -> string that identifies the event we want to listen
@@ -54,5 +82,14 @@ six.addEventListener('click', selectSix);
 seven.addEventListener('click', selectSeven);
 eight.addEventListener('click', selectEight);
 nine.addEventListener('click', selectNine);
-
 dot.addEventListener('click', selectDot);
+
+porcentage.addEventListener('click', selectPorcentage);
+divide.addEventListener('click', selectDivide);
+multiply.addEventListener('click', selectMultiply);
+minus.addEventListener('click', selectMinus);
+plus.addEventListener('click', selectPlus);
+
+clear.addEventListener('click', selectClear);
+parenthesis.addEventListener('click', selectParenthesis);
+

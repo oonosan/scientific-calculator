@@ -23,11 +23,13 @@ body {
 
 /* Display */
 .current-calculation {
-  display: flex;
-  flex-direction: row-reverse;
-  height: 3em;
-  color: white;
+  /* display: flex; */
+  /* flex-direction: row-reverse; */
+  min-height: 3em;
+  overflow: auto;
+  width: 372px;
   font-size: 3em;
+  color: white;
 }
 
 .temp-result {
@@ -36,7 +38,8 @@ body {
   flex-direction: row-reverse;
   color: white;
   height: 2em;
-  padding: 1em;
+  max-width: 372px;
+  align-items: center;
 }
 
 /* Buttons */

@@ -8,6 +8,7 @@ const six = document.getElementById('btn-6');
 const seven = document.getElementById('btn-7');
 const eight = document.getElementById('btn-8');
 const nine = document.getElementById('btn-9');
+const dot = document.getElementById('btn-dot');
 
 const porcentage = document.getElementById('btn-porcentage');
 const divide = document.getElementById('btn-divide');
@@ -17,12 +18,15 @@ const plus = document.getElementById('btn-plus');
 
 const clear = document.getElementById('btn-clear');
 const parenthesis = document.getElementById('btn-parenthesis');
-const dot = document.getElementById('btn-dot');
 const result = document.getElementById('btn-result');
 
 const currentResultOutput = document.getElementById('temp-result');
 const currentCalculationOutput = document.getElementById('current-calculation');
 
-function writeNumber(number) {
+function writeSelectedButton(number) {
   currentCalculationOutput.textContent = currentCalculationOutput.textContent + number;
+}
+
+function clearOutput() {
+  currentCalculationOutput.textContent = '';
 }
