@@ -17,6 +17,7 @@ const minus = document.getElementById('btn-minus');
 const plus = document.getElementById('btn-plus');
 
 const clear = document.getElementById('btn-clear');
+const backspace = document.getElementById('btn-backspace');
 const openingParenthesis = document.getElementById('btn-opening-parenthesis');
 const closingParenthesis = document.getElementById('btn-closing-parenthesis');
 const result = document.getElementById('btn-result');
@@ -37,6 +38,11 @@ function writeTemporaryOperationResult(tempResult) {
 function clearDisplay() {
   currentCalculationOutput.textContent = '';
   currentResultOutput.textContent = '';
+}
+
+function writeToCurrentCalculation(equation) {
+  currentCalculationOutput.textContent = equation;
+  // currentResultOutput.textContent = eval(equation);
 }
 
 function maxDigitsWarning() {

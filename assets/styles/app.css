@@ -21,6 +21,26 @@ body {
   border-radius: 1em;
 }
 
+/* Mode */
+.mode {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.4em;
+  margin-bottom: 1em;
+}
+
+/* Backspace Button */
+.backspace-button{
+  height: 3em;
+  opacity: 0.5;
+}
+
+.backspace-button:active {
+  opacity: 1;
+  transition-duration: 500ms;
+}
+
 /* Display */
 .current-calculation {
   display: flex;

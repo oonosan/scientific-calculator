@@ -1,8 +1,7 @@
 let digitsEntered = 0;
 const MAX_DIGITS = 15;
-let logOperations = [];
 let equationEntered = '';
-let parenthesisOpened = false;
+let logOperations = [];
 
 function selectZero() {
   writeNumberToDisplay('0');
@@ -79,6 +78,11 @@ function selectClear() {
   equationEntered = '';
 }
 
+function selectBackspace() {
+  equationEntered = equationEntered.slice(0, -1);
+  writeToCurrentCalculation(equationEntered);
+}
+
 function selectOpeningParenthesis() {
   writeSelectedButton('(');
 }
@@ -106,13 +110,6 @@ function operationSelected() {
   return regex.test(lastChar);
 }
 
-function numberSelectedAndNoOpeningParenthesis() {
-  let regex = /\d/;
-  // let regexParenthesis = /\)/;
-  let lastChar = equationEntered.slice(-1);
-
-  return regex.test(lastChar) && parenthesisOpened;
-}
 
 // addEventListener parameter1 -> string that identifies the event we want to listen
 //                  parameter2 -> function name, whithout parenthesis
@@ -135,6 +132,7 @@ minus.addEventListener('click', selectMinus);
 plus.addEventListener('click', selectPlus);
 
 clear.addEventListener('click', selectClear);
+backspace.addEventListener('click', selectBackspace);
 openingParenthesis.addEventListener('click', selectOpeningParenthesis);
 closingParenthesis.addEventListener('click', selectClosingParenthesis);
 
