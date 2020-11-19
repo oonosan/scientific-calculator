@@ -1,81 +1,114 @@
-let numbersEntered = 0;
+let digitsEntered = 0;
 const MAX_DIGITS = 15;
+let logOperations = [];
+let equationEntered = '';
+let selectedOperationType = false;
 
-function selectOne() {
-  maxDigitsWarning();
-  if (numbersEntered > MAX_DIGITS) {
-
-  }
-  writeSelectedButton('1');
-}
 
 function selectZero() {
-  writeSelectedButton('0');
+  writeNumberToDisplay('0');
+}
+
+function selectOne() {
+  writeNumberToDisplay('1');
 }
 
 function selectTwo() {
-  writeSelectedButton('2');
+  writeNumberToDisplay('2');
 }
 
 function selectThree() {
-  writeSelectedButton('3');
+  writeNumberToDisplay('3');
 }
 
 function selectFour() {
-  writeSelectedButton('4');
+  writeNumberToDisplay('4');
 }
 
 function selectFive() {
-  writeSelectedButton('5');
+  writeNumberToDisplay('5');
 }
 
 function selectSix() {
-  writeSelectedButton('6');
+  writeNumberToDisplay('6');
 }
 
 function selectSeven() {
-  writeSelectedButton('7');
+  writeNumberToDisplay('7');
 }
 
 function selectEight() {
-  writeSelectedButton('8');
+  writeNumberToDisplay('8');
 }
 
 function selectNine() {
-  writeSelectedButton('9');
+  writeNumberToDisplay('9');
 }
 
 function selectDot() {
   writeSelectedButton('.');
+  equationEntered += '.';
 }
 
 function selectPorcentage() {
   writeSelectedButton('%');
+  equationEntered += '%';
 }
 
 function selectDivide() {
   writeSelectedButton('/');
+  equationEntered += '/';
 }
 
 function selectMultiply() {
   writeSelectedButton('x');
+  equationEntered += '*';
 }
 
 function selectMinus() {
   writeSelectedButton('-');
+  equationEntered += '-';
 }
 
 function selectPlus() {
   writeSelectedButton('+');
+  equationEntered += '+';
 }
 
 function selectClear() {
-  clearOutput();
+  clearDisplay();
+  equationEntered = '';
 }
 
 function selectParenthesis() {
-  //Parenthesis
+  if(equationEntered !== '') {
+    if(operationEntered() === true) {
+      writeSelectedButton('(');
+    } else{
+      writeSelectedButton(')');
+    }
+  }
 }
+
+function writeNumberToDisplay(numberSelected) {
+  if (digitsEntered > MAX_DIGITS - 1) {
+    maxDigitsWarning();
+  } else {
+    writeSelectedButton(numberSelected);
+    digitsEntered++;
+    equationEntered += numberSelected;
+
+    writeTemporaryOperationResult(eval(equationEntered));
+  }
+}
+
+function operationEntered() {
+  let regex = /\D/;
+  let lastChar = equationEntered.slice(-1);
+
+  return regex.test(lastChar);
+}
+
 
 // addEventListener parameter1 -> string that identifies the event we want to listen
 //                  parameter2 -> function name, whithout parenthesis

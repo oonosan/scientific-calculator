@@ -29,8 +29,13 @@ function writeSelectedButton(number) {
   currentCalculationOutput.textContent = currentCalculationOutput.textContent + number;
 }
 
-function clearOutput() {
+function writeTemporaryOperationResult(tempResult) {
+  currentResultOutput.textContent = tempResult;
+}
+
+function clearDisplay() {
   currentCalculationOutput.textContent = '';
+  currentResultOutput.textContent = '';
 }
 
 function maxDigitsWarning() {

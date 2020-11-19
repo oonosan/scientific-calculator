@@ -23,8 +23,8 @@ body {
 
 /* Display */
 .current-calculation {
-  /* display: flex; */
-  /* flex-direction: row-reverse; */
+  display: flex;
+  flex-direction: row-reverse;
   height: 3em;
   overflow: auto;
   width: 372px;
