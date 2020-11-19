@@ -17,7 +17,8 @@ const minus = document.getElementById('btn-minus');
 const plus = document.getElementById('btn-plus');
 
 const clear = document.getElementById('btn-clear');
-const parenthesis = document.getElementById('btn-parenthesis');
+const openingParenthesis = document.getElementById('btn-opening-parenthesis');
+const closingParenthesis = document.getElementById('btn-closing-parenthesis');
 const result = document.getElementById('btn-result');
 
 const currentResultOutput = document.getElementById('temp-result');

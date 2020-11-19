@@ -81,7 +81,8 @@ button:active span {
   color: #671327;
 }
 
-#btn-parenthesis, 
+#btn-opening-parenthesis, 
+#btn-closing-parenthesis, 
 #btn-porcentage, 
 #btn-divide,
 #btn-multiply,
